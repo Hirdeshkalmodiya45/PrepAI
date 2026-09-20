@@ -35,7 +35,7 @@ async function saveMessage(conversationId, role, content) {
 /**
  * Get chat history
  */
-async function getHistory(conversationId, limit = 20) {
+async function getHistory(conversationId, limit = 5) {
     const messages = await CoachMessage.find({
         conversation: conversationId,
     })
